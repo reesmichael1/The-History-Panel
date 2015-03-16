@@ -4,17 +4,17 @@
     "developer": {
         "name": "reesmichael1"
     },
+    "icons": {
+        "128": "./images/icon128.png"
+    },
     "description": "An extension that puts the browser history in the sidebar, sorted by date.",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "background": {"scripts": ["background.js"]},
 
     "permissions": ["history"],
     "sidebar_action": {
-        "default_icon": "./images/icon.png",
+        "default_icon": "./images/icon128.png",
         "default_title": "The History Panel",
         "default_panel": "panel.html"
-    },
-    "browser_action": {
-        "default_icon" : "./images/icon.png"
     }
 }

@@ -28,15 +28,29 @@ var getHTMLString = function(callback, startTime, endTime) {
     var today = new Date();
     var todaySeconds = today.getTime();
     chrome.history.search({text: '', startTime: startTime, endTime: endTime}, function(results) {
-         results.forEach(function(page) {
-             var maxTitleLength = 20; // perhaps this could be dynamic
-             var displayTitle = page.title;
-             if (displayTitle.length > maxTitleLength) {
-                displayTitle = displayTitle.substring(0, maxTitleLength) + '...';
-             }
-             htmlString += "<li class=\"file\"><a href=\"" + page.url + "\">" + displayTitle + "</a></li>";
-         });
-         callback(htmlString);
+        var visitedPages = new Object();
+        results.forEach(function(page){
+            var domainName = new URL(page.url).hostname;
+            if (domainName.indexOf('www.') == 0) domainName = domainName.replace('www.','');
+            if (!visitedPages.hasOwnProperty(domainName)) {
+                visitedPages[domainName] = domainName;
+            }
+        });
+        for (var domainName in visitedPages) {
+            htmlString += "<li><label>" + domainName + "</label><input type=\"checkbox\" /><ol>";
+                results.forEach(function(page){
+                    if (page.url.indexOf(domainName) > -1) {
+                        var maxTitleLength = 20; // perhaps this could be dynamic
+                        var displayTitle = page.title;
+                        if (displayTitle.length > maxTitleLength) {
+                            displayTitle = displayTitle.substring(0, maxTitleLength) + '...';
+                        }
+                        htmlString += "<li class=\"file\"><a href=\"" + page.url + "\">" + displayTitle + "</a></li>";
+                    }
+                });
+            htmlString += "</ol></li>";
+        }
+        callback(htmlString);
     });
 };
 

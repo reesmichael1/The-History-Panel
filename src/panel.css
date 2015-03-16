@@ -16,6 +16,10 @@ p
 
 body { font-size: 1em; /* Sets base font size to 16px */ }
 input, select, textarea, th, td { font-size: 1em; }
+
+* {
+    -webkit-user-select: none;
+}
 	
 /* CSS Tree menu styles */
 ol.tree

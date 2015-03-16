@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="panel.css">
+</head>
+<body>
+    <base target="/_blank">
+	<ol class="tree">
+        <li>
+            <label for="today-folder">Today</label><input type="checkbox" id="today-folder">
+            <ol id="today"></ol>
+        </li>
+        <li>
+            <label for="yesterday-folder">Yesterday</label><input type="checkbox" id="yesterday-folder">
+            <ol id="yesterday"></ol>
+        </li>
+        <li>
+            <label for="week-folder">Last 7 days</label><input type="checkbox" id="week-folder">
+            <ol id="week"></ol>
+        </li>
+        <li>
+            <label for="month-folder">Last 30 days</label><input type="checkbox" id="month-folder">
+            <ol id="month"></ol>
+        </li>
+        <li>
+            <label for="older-folder">Older</label><input type="checkbox" id="older-folder">
+            <ol id="older"></ol>
+        </li>
+    </ol>
+    <script src="panel.js" type="text/javascript"></script>
+</body>
+</html>

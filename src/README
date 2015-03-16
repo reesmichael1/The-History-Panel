@@ -1,0 +1,9 @@
+The feature that originally won me over as an Opera user was the panels. Now that the sidebar is back in Opera 29, it's time to rebuild that functionality.
+
+TODO:
+* Add locales (help requested!)
+* Collapse links from same domain into folder
+* Save open/close state
+* Search
+* Ability to remove links from history
+* Arrow key navigation

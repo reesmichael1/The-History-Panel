@@ -9,7 +9,6 @@
     },
     "description": "An extension that puts the browser history in the sidebar, sorted by date.",
     "version": "0.1.0",
-    "background": {"scripts": ["background.js"]},
 
     "permissions": ["history"],
     "sidebar_action": {

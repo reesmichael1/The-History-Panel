@@ -20,6 +20,12 @@ input, select, textarea, th, td { font-size: 1em; }
 * {
     -webkit-user-select: none;
 }
+
+input 
+{
+    margin: 1px 0 0 0;
+    width: 99%;
+}
 	
 /* CSS Tree menu styles */
 ol.tree

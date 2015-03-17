@@ -8,7 +8,7 @@
         "128": "./images/icon128.png"
     },
     "description": "An extension that puts the browser history in the sidebar, sorted by date.",
-    "version": "0.0.4",
+    "version": "0.1.0",
 
     "permissions": ["history"],
     "sidebar_action": {

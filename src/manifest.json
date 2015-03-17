@@ -9,12 +9,11 @@
     },
     "description": "An extension that puts the browser history in the sidebar, sorted by date.",
     "version": "0.1.0",
-    "background": {"scripts": ["background.js"]},
 
-    "permissions": ["history"],
+    "permissions": ["history", "contextMenus"],
     "sidebar_action": {
         "default_icon": "./images/icon128.png",
         "default_title": "The History Panel",
-        "default_panel": "panel.html"
+        "default_panel": "thp-panel.html"
     }
 }
